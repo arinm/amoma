@@ -1,0 +1,37 @@
+<div>
+
+<div class="row ajax-hotels">
+
+    {{#hotels}}
+     <div class="col-md-4">
+        <div class="hotel">
+            <img src="{{image}}" class="img-responsive">
+            <div class="star-hotel">
+                {{#times stars }}
+                <i class="fa fa-star" aria-hidden="true"></i>
+                {{/times}}
+            </div>
+            <p class="title-hotel">{{name}}</p>
+            <hr>
+            <p class="price-hotel">From <span>{{price}} €</span> /night</p>
+            <p class="reviews">
+                <span>
+                {{#ifCond rating ">=" "4.5" }}
+                Impressive
+                {{/ifCond}}
+
+                {{#ifCond rating "<" "4.5" }}
+                    Fabulous
+                {{/ifCond}}
+
+                , {{rating}} </span>(356 reviews)
+            </p>
+            <button class="btn btn-book-now">Book now</button>
+        </div>
+    </div>
+    
+
+    {{/hotels}}
+</div>
+</div>
+<!--folosit handlebars | arin -->
